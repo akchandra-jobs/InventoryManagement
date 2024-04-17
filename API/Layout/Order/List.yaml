@@ -1,0 +1,51 @@
+grid:
+  cardTitle:
+    fields:
+    - fieldName: Name
+      dataType: string
+      label: Name
+      column: 4
+  cardDetail:
+    fields:
+    - fieldName: Code
+      dataType: string
+      label: Code
+      column: 4
+    - fieldName: CustomerId
+      dataType: guid
+      required: false
+      label: Customer
+      column: 4
+      dataSource: Customer
+    - fieldName: OrderStatusId
+      dataType: guid
+      required: false
+      label: OrderStatus
+      column: 4
+      dataSource: OrderStatus
+  cardStatus:
+    fields:
+    - fieldName: PaymentMethodId
+      dataType: guid
+      required: false
+      label: PaymentMethod
+      column: 4
+      dataSource: PaymentMethod
+    - fieldName: ShippingMethodId
+      dataType: guid
+      required: false
+      label: ShippingMethod
+      column: 4
+      dataSource: ShippingMethod
+filter:
+  fields:
+  - fieldName: Name
+    dataType: string
+    label: Name
+    column: 4
+  - fieldName: CustomerId
+    dataType: guid
+    required: false
+    label: Customer
+    column: 4
+    dataSource: Customer

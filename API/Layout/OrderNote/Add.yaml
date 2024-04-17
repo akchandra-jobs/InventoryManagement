@@ -1,0 +1,21 @@
+- label: Order note details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Code
+    dataType: String
+    required: false
+    length: 50
+    label: Code
+    column: 2
+  - fieldName: Name
+    dataType: String
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Note
+    dataType: String
+    required: false
+    label: Note
+    column: 4

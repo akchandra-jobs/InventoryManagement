@@ -1,0 +1,28 @@
+- label: Barcode details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Code
+    dataType: string
+    required: false
+    length: 50
+    label: Code
+    column: 2
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Format
+    dataType: string
+    required: false
+    length: 50
+    label: Format
+    column: 2
+  - fieldName: Value
+    dataType: string
+    required: false
+    length: 255
+    label: Value
+    column: 2

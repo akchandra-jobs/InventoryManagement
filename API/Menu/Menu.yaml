@@ -1,0 +1,164 @@
+- name: Role & Security
+  icon: fa-user-lock
+  items:
+    - name: Role
+      description: Role management and administration.
+      route: /role
+      icon: fa-user-tag
+    - name: User In Role
+      description: User assignment to roles.
+      route: /userInRole
+      icon: fa-user-cog
+    - name: Role Entitlement
+      description: Role entitlement management.
+      route: /roleEntitlement
+      icon: fa-user-shield
+
+- name: Product & Inventory
+  icon: fa-boxes
+  items:
+    - name: Product
+      description: Product management and administration.
+      route: /product
+      icon: fa-box
+    - name: Product Category
+      description: Product category management.
+      route: /productCategory
+      icon: fa-wrench
+    - name: Product Variant
+      description: Product variant management.
+      route: /productVariant
+      icon: fa-pallet
+    - name: Warehouse
+      description: Warehouse management and administration.
+      route: /warehouse
+      icon: fa-warehouse
+    - name: Location
+      description: Location management within warehouses.
+      route: /location
+      icon: fa-map-marker-alt
+    - name: Stock Adjustment
+      description: Stock adjustment management.
+      route: /stockAdjustment
+      icon: fa-edit
+    - name: Stock Transfer
+      description: Stock transfer management.
+      route: /stockTransfer
+      icon: fa-exchange-alt
+    - name: Stock Movement
+      description: Stock movement tracking.
+      route: /stockMovement
+      icon: fa-truck-loading
+    - name: Lot Number
+      description: Lot number management.
+      route: /lotNumber
+      icon: fa-hashtag
+    - name: Expiration Date
+      description: Expiration date management.
+      route: /expirationDate
+      icon: fa-calendar-times
+    - name: Serial Number
+      description: Serial number management.
+      route: /serialNumber
+      icon: fa-hashtag
+    - name: Supplier
+      description: Supplier management and administration.
+      route: /supplier
+      icon: fa-truck
+    - name: Unit Of Measurement
+      description: Unit of measurement management.
+      route: /unitOfMeasurement
+      icon: fa-balance-scale
+    - name: Inventory Report
+      description: Inventory reporting and analysis.
+      route: /inventoryReport
+      icon: fa-file-alt
+    - name: Reorder Level
+      description: Reorder level configuration and management.
+      route: /reorderLevel
+      icon: fa-arrow-up
+    - name: Demand Forecasting
+      description: Demand forecasting and analysis.
+      route: /demandForecasting
+      icon: fa-chart-line
+    - name: Barcode
+      description: Barcode management and generation.
+      route: /barcode
+      icon: fa-barcode
+
+- name: Customer & Order
+  icon: fa-shopping-cart
+  items:
+    - name: Customer
+      description: Customer management and administration.
+      route: /customer
+      icon: fa-address-card
+    - name: ProductService
+      description: Management of products and services provided.
+      route: /productService
+      icon: fa-concierge-bell
+    - name: Order
+      description: Order management and administration.
+      route: /order
+      icon: fa-shopping-cart
+    - name: Order Item
+      description: Order item management.
+      route: /orderItem
+      icon: fa-gift
+    - name: Order Status
+      description: Order status management.
+      route: /orderStatus
+      icon: fa-check-circle
+    - name: Payment Method
+      description: Payment method management.
+      route: /paymentMethod
+      icon: fa-credit-card
+    - name: Shipping Method
+      description: Shipping method management.
+      route: /shippingMethod
+      icon: fa-truck-moving
+    - name: Shipping Address
+      description: Shipping address management.
+      route: /shippingAddress
+      icon: fa-map-marker-alt
+    - name: Billing Address
+      description: Billing address management.
+      route: /billingAddress
+      icon: fa-map-marker-alt
+    - name: Tax
+      description: Tax management and administration.
+      route: /tax
+      icon: fa-percent
+    - name: Discount
+      description: Discount management and administration.
+      route: /discount
+      icon: fa-tag
+    - name: Currency
+      description: Currency management and administration.
+      route: /currency
+      icon: fa-money-bill-alt
+    - name: Order Note
+      description: Order note management.
+      route: /orderNote
+      icon: fa-sticky-note
+    - name: Return
+      description: Return management and administration.
+      route: /return
+      icon: fa-undo
+    - name: Return Reason
+      description: Return reason management.
+      route: /returnReason
+      icon: fa-exclamation-circle
+    - name: Order History
+      description: Order history management.
+      route: /orderHistory
+      icon: fa-history
+    - name: Payment Status
+      description: Payment status management.
+      route: /paymentStatus
+      icon: fa-money-check
+    - name: Delivery Status
+      description: Delivery status management.
+      route: /deliveryStatus
+      icon: fa-box-open
+

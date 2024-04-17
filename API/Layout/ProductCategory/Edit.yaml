@@ -1,0 +1,16 @@
+- label: Product category details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Code
+    dataType: string
+    required: false
+    length: 50
+    label: Code
+    column: 2

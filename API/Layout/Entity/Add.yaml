@@ -1,0 +1,24 @@
+- label: Entity details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 4
+- label: System fields
+  type: section
+  column: 4
+  fields:
+  - fieldName: CreatedBy
+    dataType: guid
+    required: false
+    label: Created by
+    column: 4
+  - fieldName: UpdatedBy
+    dataType: guid
+    required: false
+    label: Updated by
+    column: 4

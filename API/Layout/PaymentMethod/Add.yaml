@@ -1,0 +1,40 @@
+- label: Payment Method Details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Code
+    dataType: string
+    required: false
+    length: 50
+    label: Code
+    column: 2
+- label: Additional Details
+  type: section
+  column: 4
+  fields:
+  - fieldName: CreatedOn
+    dataType: DateTime
+    required: false
+    label: Created On
+    column: 2
+  - fieldName: CreatedBy
+    dataType: guid
+    required: false
+    label: Created By
+    column: 2
+  - fieldName: UpdatedOn
+    dataType: DateTime
+    required: false
+    label: Updated On
+    column: 2
+  - fieldName: UpdatedBy
+    dataType: guid
+    required: false
+    label: Updated By
+    column: 2

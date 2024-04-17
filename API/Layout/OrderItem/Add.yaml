@@ -1,0 +1,42 @@
+- label: Order item details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Code
+    dataType: string
+    required: false
+    length: 50
+    label: Code
+    column: 2
+  - fieldName: ProductServiceId
+    dataType: guid
+    required: false
+    label: Product service id
+    column: 2
+    dataSource: ProductService
+- label: Additional details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Quantity
+    dataType: numeric
+    required: false
+    label: Quantity
+    column: 2
+  - fieldName: Price
+    dataType: numeric
+    required: false
+    label: Price
+    column: 2
+  - fieldName: OrderId
+    dataType: guid
+    required: false
+    label: Order id
+    column: 2
+    dataSource: Order

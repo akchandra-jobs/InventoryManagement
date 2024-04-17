@@ -1,0 +1,41 @@
+grid:
+  cardTitle:
+    fields:
+    - fieldName: Name
+      dataType: String
+      label: Name
+      column: 4
+  cardDetail:
+    fields:
+    - fieldName: Code
+      dataType: String
+      label: Code
+      column: 4
+    - fieldName: MinimumValue
+      dataType: Numeric
+      label: Minimum Value
+      column: 4
+    - fieldName: MaximumValue
+      dataType: Numeric
+      label: Maximum Value
+      column: 4
+  cardStatus:
+    fields:
+    - fieldName: CreatedOn
+      dataType: DateTime
+      label: Created On
+      column: 4
+    - fieldName: UpdatedOn
+      dataType: DateTime
+      label: Updated On
+      column: 4
+filter:
+  fields:
+  - fieldName: Name
+    dataType: String
+    label: Name
+    column: 4
+  - fieldName: Code
+    dataType: String
+    label: Code
+    column: 4

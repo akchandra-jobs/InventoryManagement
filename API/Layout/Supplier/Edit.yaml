@@ -1,0 +1,31 @@
+- label: Supplier details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Code
+    dataType: string
+    required: false
+    length: 50
+    label: Code
+    column: 4
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 4
+- label: Additional details
+  type: section
+  column: 4
+  fields:
+  - fieldName: UpdatedOn
+    dataType: DateTime
+    required: false
+    label: Updated On
+    column: 4
+  - fieldName: UpdatedBy
+    dataType: guid
+    required: false
+    label: Updated By
+    column: 4
+    dataSource: User

@@ -1,0 +1,26 @@
+- label: Edit Return
+  type: section
+  column: 4
+  fields:
+  - fieldName: Code
+    dataType: String
+    required: false
+    length: 50
+    label: Code
+    column: 2
+  - fieldName: Name
+    dataType: String
+    required: false
+    length: 255
+    label: Name
+    column: 2
+  - fieldName: Reason
+    dataType: String
+    required: false
+    label: Reason
+    column: 2
+  - fieldName: Status
+    dataType: String
+    required: false
+    label: Status
+    column: 2

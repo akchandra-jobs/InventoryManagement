@@ -1,0 +1,43 @@
+- label: Tenant details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Code
+    dataType: string
+    required: true
+    length: 20
+    label: Code
+    column: 2
+  - fieldName: Name
+    dataType: string
+    required: false
+    length: 255
+    label: Name
+    column: 2
+- label: Address details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Address1
+    dataType: string
+    required: false
+    length: 255
+    label: Address1
+    column: 2
+  - fieldName: Address2
+    dataType: string
+    required: false
+    length: 255
+    label: Address2
+    column: 2
+  - fieldName: City
+    dataType: string
+    required: false
+    length: 255
+    label: City
+    column: 2
+  - fieldName: Pincode
+    dataType: numeric
+    required: false
+    label: Pincode
+    column: 2

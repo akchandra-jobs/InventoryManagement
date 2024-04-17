@@ -1,0 +1,21 @@
+- label: Role Entitlement Details
+  type: section
+  column: 4
+  fields:
+  - fieldName: Entitlement
+    dataType: numeric
+    required: true
+    label: Entitlement
+    column: 2
+  - fieldName: RoleId
+    dataType: guid
+    required: false
+    label: Role
+    column: 2
+    dataSource: Role
+  - fieldName: EntityId
+    dataType: guid
+    required: false
+    label: Entity
+    column: 2
+    dataSource: Entity

@@ -1,0 +1,49 @@
+grid:
+  cardTitle:
+    fields:
+    - fieldName: Name
+      dataType: String
+      label: Name
+      column: 4
+  cardDetail:
+    fields:
+    - fieldName: Code
+      dataType: String
+      label: Code
+      column: 4
+    - fieldName: Quantity
+      dataType: numeric
+      label: Quantity
+      column: 4
+    - fieldName: ProductVariantId
+      dataType: guid
+      required: false
+      label: Product Variant
+      column: 4
+      dataSource: ProductVariant
+  cardStatus:
+    fields:
+    - fieldName: CreatedOn
+      dataType: DateTime
+      label: Created On
+      column: 4
+    - fieldName: UpdatedOn
+      dataType: DateTime
+      label: Updated On
+      column: 4
+filter:
+  fields:
+  - fieldName: Name
+    dataType: String
+    label: Name
+    column: 4
+  - fieldName: Code
+    dataType: String
+    label: Code
+    column: 4
+  - fieldName: ProductVariantId
+    dataType: guid
+    required: false
+    label: Product Variant
+    column: 4
+    dataSource: ProductVariant
