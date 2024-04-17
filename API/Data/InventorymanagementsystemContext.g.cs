@@ -20,13 +20,21 @@ namespace Inventorymanagementsystem.Data
             modelBuilder.Entity<User>().HasKey(a => a.Id);
             modelBuilder.Entity<Role>().HasKey(a => a.Id);
             modelBuilder.Entity<Product>().HasKey(a => a.Id);
+            modelBuilder.Entity<StockAdjustment>().HasKey(a => a.Id);
+            modelBuilder.Entity<StockTransfer>().HasKey(a => a.Id);
+            modelBuilder.Entity<StockMovement>().HasKey(a => a.Id);
+            modelBuilder.Entity<Order>().HasKey(a => a.Id);
+            modelBuilder.Entity<OrderItem>().HasKey(a => a.Id);
+            modelBuilder.Entity<OrderStatus>().HasKey(a => a.Id);
+            modelBuilder.Entity<OrderNote>().HasKey(a => a.Id);
+            modelBuilder.Entity<Return>().HasKey(a => a.Id);
+            modelBuilder.Entity<ReturnReason>().HasKey(a => a.Id);
+            modelBuilder.Entity<OrderHistory>().HasKey(a => a.Id);
+            modelBuilder.Entity<Customer>().HasKey(a => a.Id);
             modelBuilder.Entity<ProductCategory>().HasKey(a => a.Id);
             modelBuilder.Entity<ProductVariant>().HasKey(a => a.Id);
             modelBuilder.Entity<Warehouse>().HasKey(a => a.Id);
             modelBuilder.Entity<Location>().HasKey(a => a.Id);
-            modelBuilder.Entity<StockAdjustment>().HasKey(a => a.Id);
-            modelBuilder.Entity<StockTransfer>().HasKey(a => a.Id);
-            modelBuilder.Entity<StockMovement>().HasKey(a => a.Id);
             modelBuilder.Entity<LotNumber>().HasKey(a => a.Id);
             modelBuilder.Entity<ExpirationDate>().HasKey(a => a.Id);
             modelBuilder.Entity<SerialNumber>().HasKey(a => a.Id);
@@ -36,11 +44,7 @@ namespace Inventorymanagementsystem.Data
             modelBuilder.Entity<ReorderLevel>().HasKey(a => a.Id);
             modelBuilder.Entity<DemandForecasting>().HasKey(a => a.Id);
             modelBuilder.Entity<Barcode>().HasKey(a => a.Id);
-            modelBuilder.Entity<Customer>().HasKey(a => a.Id);
             modelBuilder.Entity<ProductService>().HasKey(a => a.Id);
-            modelBuilder.Entity<Order>().HasKey(a => a.Id);
-            modelBuilder.Entity<OrderItem>().HasKey(a => a.Id);
-            modelBuilder.Entity<OrderStatus>().HasKey(a => a.Id);
             modelBuilder.Entity<PaymentMethod>().HasKey(a => a.Id);
             modelBuilder.Entity<ShippingMethod>().HasKey(a => a.Id);
             modelBuilder.Entity<ShippingAddress>().HasKey(a => a.Id);
@@ -48,10 +52,6 @@ namespace Inventorymanagementsystem.Data
             modelBuilder.Entity<Tax>().HasKey(a => a.Id);
             modelBuilder.Entity<Discount>().HasKey(a => a.Id);
             modelBuilder.Entity<Currency>().HasKey(a => a.Id);
-            modelBuilder.Entity<OrderNote>().HasKey(a => a.Id);
-            modelBuilder.Entity<Return>().HasKey(a => a.Id);
-            modelBuilder.Entity<ReturnReason>().HasKey(a => a.Id);
-            modelBuilder.Entity<OrderHistory>().HasKey(a => a.Id);
             modelBuilder.Entity<PaymentStatus>().HasKey(a => a.Id);
             modelBuilder.Entity<DeliveryStatus>().HasKey(a => a.Id);
             modelBuilder.Entity<UserInRole>().HasOne(a => a.TenantId_Tenant).WithMany().HasForeignKey(c => c.TenantId);
@@ -74,8 +74,6 @@ namespace Inventorymanagementsystem.Data
             modelBuilder.Entity<Role>().HasOne(a => a.CreatedBy_User).WithMany().HasForeignKey(c => c.CreatedBy);
             modelBuilder.Entity<Role>().HasOne(a => a.UpdatedBy_User).WithMany().HasForeignKey(c => c.UpdatedBy);
             modelBuilder.Entity<Product>().HasOne(a => a.ProductCategoryId_ProductCategory).WithMany().HasForeignKey(c => c.ProductCategoryId);
-            modelBuilder.Entity<ProductVariant>().HasOne(a => a.ProductId_Product).WithMany().HasForeignKey(c => c.ProductId);
-            modelBuilder.Entity<Location>().HasOne(a => a.WarehouseId_Warehouse).WithMany().HasForeignKey(c => c.WarehouseId);
             modelBuilder.Entity<StockAdjustment>().HasOne(a => a.ProductVariantId_ProductVariant).WithMany().HasForeignKey(c => c.ProductVariantId);
             modelBuilder.Entity<StockAdjustment>().HasOne(a => a.LocationId_Location).WithMany().HasForeignKey(c => c.LocationId);
             modelBuilder.Entity<StockTransfer>().HasOne(a => a.ProductVariantId_ProductVariant).WithMany().HasForeignKey(c => c.ProductVariantId);
@@ -94,6 +92,8 @@ namespace Inventorymanagementsystem.Data
             modelBuilder.Entity<OrderItem>().HasOne(a => a.OrderId_Order).WithMany().HasForeignKey(c => c.OrderId);
             modelBuilder.Entity<OrderItem>().HasOne(a => a.ProductServiceId_ProductService).WithMany().HasForeignKey(c => c.ProductServiceId);
             modelBuilder.Entity<OrderHistory>().HasOne(a => a.OrderId_Order).WithMany().HasForeignKey(c => c.OrderId);
+            modelBuilder.Entity<ProductVariant>().HasOne(a => a.ProductId_Product).WithMany().HasForeignKey(c => c.ProductId);
+            modelBuilder.Entity<Location>().HasOne(a => a.WarehouseId_Warehouse).WithMany().HasForeignKey(c => c.WarehouseId);
         }
 
         public DbSet<UserInRole> UserInRole { get; set; }
@@ -104,13 +104,21 @@ namespace Inventorymanagementsystem.Data
         public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<StockAdjustment> StockAdjustment { get; set; }
+        public DbSet<StockTransfer> StockTransfer { get; set; }
+        public DbSet<StockMovement> StockMovement { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderItem> OrderItem { get; set; }
+        public DbSet<OrderStatus> OrderStatus { get; set; }
+        public DbSet<OrderNote> OrderNote { get; set; }
+        public DbSet<Return> Return { get; set; }
+        public DbSet<ReturnReason> ReturnReason { get; set; }
+        public DbSet<OrderHistory> OrderHistory { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
         public DbSet<ProductVariant> ProductVariant { get; set; }
         public DbSet<Warehouse> Warehouse { get; set; }
         public DbSet<Location> Location { get; set; }
-        public DbSet<StockAdjustment> StockAdjustment { get; set; }
-        public DbSet<StockTransfer> StockTransfer { get; set; }
-        public DbSet<StockMovement> StockMovement { get; set; }
         public DbSet<LotNumber> LotNumber { get; set; }
         public DbSet<ExpirationDate> ExpirationDate { get; set; }
         public DbSet<SerialNumber> SerialNumber { get; set; }
@@ -120,11 +128,7 @@ namespace Inventorymanagementsystem.Data
         public DbSet<ReorderLevel> ReorderLevel { get; set; }
         public DbSet<DemandForecasting> DemandForecasting { get; set; }
         public DbSet<Barcode> Barcode { get; set; }
-        public DbSet<Customer> Customer { get; set; }
         public DbSet<ProductService> ProductService { get; set; }
-        public DbSet<Order> Order { get; set; }
-        public DbSet<OrderItem> OrderItem { get; set; }
-        public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
         public DbSet<ShippingMethod> ShippingMethod { get; set; }
         public DbSet<ShippingAddress> ShippingAddress { get; set; }
@@ -132,10 +136,6 @@ namespace Inventorymanagementsystem.Data
         public DbSet<Tax> Tax { get; set; }
         public DbSet<Discount> Discount { get; set; }
         public DbSet<Currency> Currency { get; set; }
-        public DbSet<OrderNote> OrderNote { get; set; }
-        public DbSet<Return> Return { get; set; }
-        public DbSet<ReturnReason> ReturnReason { get; set; }
-        public DbSet<OrderHistory> OrderHistory { get; set; }
         public DbSet<PaymentStatus> PaymentStatus { get; set; }
         public DbSet<DeliveryStatus> DeliveryStatus { get; set; }
     }
